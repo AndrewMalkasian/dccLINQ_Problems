@@ -15,5 +15,10 @@ namespace LINQ_Problems
             return strings.Where(s => s.ToLower().Contains("th"));
         }
 
+        public static IEnumerable<string> ReturnDistinctStringList(List<string> strings)
+        {
+            return strings.Distinct();
+        }
+
     }
 }
