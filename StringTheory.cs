@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LINQ_Problems
 {
-    public class StringTheory
+    public static class StringTheory
     {
-        public delegate List<string> DoThingToStringList(List<string> strings);
+        public delegate IEnumerable<string> DoThingToStringList(List<string> strings);
 
-        public List<string> ReturnTHSubStrings(List<string> strings)
+        public static IEnumerable<string> ReturnTHSubStrings(List<string> strings)
         {
-
+            return strings.Where(s => s.ToLower().Contains("th"));
         }
 
     }
