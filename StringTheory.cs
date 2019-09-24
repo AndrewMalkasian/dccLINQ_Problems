@@ -20,5 +20,18 @@ namespace LINQ_Problems
             return strings.Distinct();
         }
 
+        public static double SuperAverage(List<string> strings)
+        {
+            List<double> masterList = new List<double>();
+            foreach (var item in strings)
+            {
+                var temporary = item.Split(',').Select(double.Parse).ToList();
+                temporary.Remove(temporary.Min());
+                masterList.Add(temporary.Average());
+            }
+            double average = masterList.Average();
+            return average;
+        }
+
     }
 }
