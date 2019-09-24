@@ -10,12 +10,15 @@ namespace LINQ_Problems
     {
         static void Main(string[] args)
         {
+            StringTheory.DoThingToStringList MakeStringDoThing;
 
             //1
             //Using LINQ, write a function that determines if any word in a list contains the substring “th”.
-
-
-            //List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", “mathematics” };
+           
+            MakeStringDoThing = StringTheory.ReturnTHSubStrings;
+            List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+            var result = MakeStringDoThing(words);
+            
 
             //2
             //Using LINQ, write a function that takes in a list of strings and returns a copy of the list without duplicates.
@@ -23,7 +26,7 @@ namespace LINQ_Problems
             //3
 
             //Using LINQ, write a function that calculates the class grade average after dropping the lowest grade for each student.The function should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), drops the lowest grade from each string, averages the rest of the grades from that string, then averages the averages.
-           
+
             //           List<string> classGrades = new List<string>()
             //           {
 
