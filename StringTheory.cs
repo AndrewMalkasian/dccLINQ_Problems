@@ -33,5 +33,26 @@ namespace LINQ_Problems
             return average;
         }
 
+        public static string CountMyChars(string input)
+        {
+            int counter = 1;
+            string result = "";
+            string.Concat(string.Concat(input.ToLower().OrderBy(a=>a)),"0").Aggregate((a, b) =>
+            {
+                if (a == b)
+                {
+                    counter++;
+                }
+                else
+                {
+                    result += a.ToString().ToUpper();
+                    result += counter.ToString();
+                    counter = 1;
+                }
+                return b;
+            });
+            return result;
+        }
+
     }
 }

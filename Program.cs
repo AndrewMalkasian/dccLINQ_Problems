@@ -10,21 +10,21 @@ namespace LINQ_Problems
     {
         static void Main(string[] args)
         {
-            StringTheory.DoThingToStringList MakeStringDoThing;
+            //StringTheory.DoThingToStringList MakeStringDoThing;
 
             //1
             //Using LINQ, write a function that determines if any word in a list contains the substring “th”.
-           
-            MakeStringDoThing = StringTheory.ReturnTHSubStrings;
-            List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
-            var result = MakeStringDoThing(words);
+
+            //MakeStringDoThing = StringTheory.ReturnTHSubStrings;
+            //List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+            //var result = MakeStringDoThing(words);
 
 
             //2
             //Using LINQ, write a function that takes in a list of strings and returns a copy of the list without duplicates.
-            MakeStringDoThing = StringTheory.ReturnDistinctStringList;
-            List<string> names = new List<string>() { "Mike", "Dan", "Scott", "Nick", "Mike" };
-            result = MakeStringDoThing(names);
+            //MakeStringDoThing = StringTheory.ReturnDistinctStringList;
+            //List<string> names = new List<string>() { "Mike", "Dan", "Scott", "Nick", "Mike" };
+            //result = MakeStringDoThing(names);
 
             //3
 
@@ -46,6 +46,8 @@ namespace LINQ_Problems
             //4
 
             //        Write a function that takes in a string of letters(i.e. “Terrill”) and returns an alphabetically ordered string corresponding to the letter frequency(i.e. "E1I1L2R2T1")
+            StringTheory.CountMyChars("Terrill");
+
 
         }
     }
